@@ -1,0 +1,1004 @@
+{
+  "./images/jb.jpeg": [
+    {
+      "box": [
+        75.26,
+        180.52,
+        749.09,
+        654.29
+      ],
+      "score": 1.0,
+      "cap": "a pizza on a plate"
+    },
+    {
+      "box": [
+        1.31,
+        2.46,
+        211.46,
+        119.9
+      ],
+      "score": 0.99,
+      "cap": "a bowl of soup"
+    },
+    {
+      "box": [
+        570.72,
+        0.0,
+        786.43,
+        145.13
+      ],
+      "score": 0.97,
+      "cap": "a white bowl on a table"
+    },
+    {
+      "box": [
+        176.36,
+        301.55,
+        670.57,
+        610.16
+      ],
+      "score": 0.92,
+      "cap": "a slice of pizza"
+    },
+    {
+      "box": [
+        404.3,
+        198.21,
+        565.98,
+        333.54
+      ],
+      "score": 0.9,
+      "cap": "a green leaf on a pizza"
+    },
+    {
+      "box": [
+        312.52,
+        3.18,
+        778.2,
+        182.21
+      ],
+      "score": 0.77,
+      "cap": "a white table cloth"
+    },
+    {
+      "box": [
+        630.88,
+        461.6,
+        800.0,
+        768.51
+      ],
+      "score": 0.69,
+      "cap": "a fork on a plate"
+    },
+    {
+      "box": [
+        156.57,
+        124.88,
+        627.59,
+        358.74
+      ],
+      "score": 0.68,
+      "cap": "a salad with vegetables"
+    },
+    {
+      "box": [
+        293.05,
+        2.52,
+        585.63,
+        133.73
+      ],
+      "score": 0.67,
+      "cap": "a box of donuts"
+    },
+    {
+      "box": [
+        57.37,
+        271.65,
+        484.21,
+        613.43
+      ],
+      "score": 0.61,
+      "cap": "a slice of pizza"
+    },
+    {
+      "box": [
+        159.41,
+        142.87,
+        402.81,
+        292.01
+      ],
+      "score": 0.6,
+      "cap": "a piece of red tomato"
+    },
+    {
+      "box": [
+        353.19,
+        252.8,
+        450.05,
+        330.34
+      ],
+      "score": 0.58,
+      "cap": "a red flower"
+    },
+    {
+      "box": [
+        303.07,
+        5.13,
+        477.01,
+        111.85
+      ],
+      "score": 0.56,
+      "cap": "a red and white box"
+    },
+    {
+      "box": [
+        601.25,
+        261.99,
+        731.83,
+        348.79
+      ],
+      "score": 0.51,
+      "cap": "a slice of pizza"
+    },
+    {
+      "box": [
+        225.32,
+        113.84,
+        349.13,
+        292.69
+      ],
+      "score": 0.49,
+      "cap": "a red tomato"
+    },
+    {
+      "box": [
+        68.8,
+        255.39,
+        387.29,
+        508.53
+      ],
+      "score": 0.48,
+      "cap": "a piece of cooked bacon"
+    },
+    {
+      "box": [
+        664.82,
+        574.22,
+        792.4,
+        762.21
+      ],
+      "score": 0.45,
+      "cap": "a fork on a plate"
+    },
+    {
+      "box": [
+        160.19,
+        151.4,
+        280.46,
+        263.31
+      ],
+      "score": 0.44,
+      "cap": "a piece of meat"
+    },
+    {
+      "box": [
+        424.47,
+        314.82,
+        709.34,
+        606.19
+      ],
+      "score": 0.43,
+      "cap": "a slice of pizza"
+    },
+    {
+      "box": [
+        36.2,
+        540.76,
+        763.26,
+        795.51
+      ],
+      "score": 0.41,
+      "cap": "a silver fork"
+    },
+    {
+      "box": [
+        540.41,
+        317.87,
+        685.88,
+        378.0
+      ],
+      "score": 0.4,
+      "cap": "a piece of carrot"
+    },
+    {
+      "box": [
+        0.0,
+        2.46,
+        800.0,
+        124.83
+      ],
+      "score": 0.4,
+      "cap": "a plate of food"
+    },
+    {
+      "box": [
+        28.72,
+        621.52,
+        276.56,
+        778.0
+      ],
+      "score": 0.37,
+      "cap": "the table is wooden"
+    },
+    {
+      "box": [
+        518.51,
+        5.36,
+        794.62,
+        236.68
+      ],
+      "score": 0.36,
+      "cap": "a white bowl on a table"
+    },
+    {
+      "box": [
+        38.7,
+        378.09,
+        740.51,
+        739.26
+      ],
+      "score": 0.35,
+      "cap": "a slice of pizza"
+    },
+    {
+      "box": [
+        615.6,
+        343.69,
+        761.66,
+        518.2
+      ],
+      "score": 0.35,
+      "cap": "a slice of pizza"
+    },
+    {
+      "box": [
+        285.58,
+        154.11,
+        661.69,
+        429.22
+      ],
+      "score": 0.35,
+      "cap": "a slice of pizza"
+    },
+    {
+      "box": [
+        490.35,
+        347.22,
+        680.05,
+        556.88
+      ],
+      "score": 0.34,
+      "cap": "a piece of meat"
+    },
+    {
+      "box": [
+        62.14,
+        63.2,
+        770.67,
+        407.65
+      ],
+      "score": 0.33,
+      "cap": "a pizza on a table"
+    },
+    {
+      "box": [
+        358.33,
+        206.25,
+        612.14,
+        365.05
+      ],
+      "score": 0.33,
+      "cap": "a piece of green vegetable"
+    },
+    {
+      "box": [
+        587.79,
+        168.68,
+        796.6,
+        743.49
+      ],
+      "score": 0.32,
+      "cap": "a fork on a plate"
+    },
+    {
+      "box": [
+        318.33,
+        4.41,
+        424.91,
+        82.5
+      ],
+      "score": 0.32,
+      "cap": "a red and white cake"
+    },
+    {
+      "box": [
+        498.0,
+        380.0,
+        800.0,
+        778.13
+      ],
+      "score": 0.31,
+      "cap": "a fork on a plate"
+    },
+    {
+      "box": [
+        325.06,
+        134.97,
+        426.96,
+        238.47
+      ],
+      "score": 0.3,
+      "cap": "a piece of meat"
+    },
+    {
+      "box": [
+        11.7,
+        2.51,
+        218.28,
+        57.26
+      ],
+      "score": 0.3,
+      "cap": "a white plate with a slice of pizza"
+    },
+    {
+      "box": [
+        451.14,
+        518.08,
+        567.92,
+        614.51
+      ],
+      "score": 0.3,
+      "cap": "a piece of carrot"
+    },
+    {
+      "box": [
+        605.06,
+        8.53,
+        764.92,
+        99.78
+      ],
+      "score": 0.29,
+      "cap": "a white bowl on the table"
+    },
+    {
+      "box": [
+        727.6,
+        100.51,
+        797.33,
+        223.74
+      ],
+      "score": 0.29,
+      "cap": "a fork on a table"
+    },
+    {
+      "box": [
+        313.59,
+        505.3,
+        468.24,
+        614.96
+      ],
+      "score": 0.29,
+      "cap": "a slice of tomato"
+    },
+    {
+      "box": [
+        166.71,
+        332.64,
+        403.25,
+        510.28
+      ],
+      "score": 0.28,
+      "cap": "a piece of meat"
+    },
+    {
+      "box": [
+        520.42,
+        156.37,
+        626.56,
+        326.39
+      ],
+      "score": 0.25,
+      "cap": "a piece of meat"
+    },
+    {
+      "box": [
+        12.28,
+        2.86,
+        128.24,
+        89.23
+      ],
+      "score": 0.24,
+      "cap": "a slice of cake"
+    },
+    {
+      "box": [
+        579.33,
+        259.85,
+        749.07,
+        394.29
+      ],
+      "score": 0.24,
+      "cap": "a slice of pizza"
+    },
+    {
+      "box": [
+        405.82,
+        15.61,
+        584.71,
+        166.15
+      ],
+      "score": 0.24,
+      "cap": "a silver fork"
+    },
+    {
+      "box": [
+        111.97,
+        296.93,
+        316.3,
+        469.9
+      ],
+      "score": 0.23,
+      "cap": "a piece of meat"
+    },
+    {
+      "box": [
+        255.98,
+        135.25,
+        331.35,
+        269.19
+      ],
+      "score": 0.23,
+      "cap": "a slice of tomato"
+    },
+    {
+      "box": [
+        400.07,
+        2.09,
+        607.93,
+        58.34
+      ],
+      "score": 0.23,
+      "cap": "a stack of white paper plates"
+    },
+    {
+      "box": [
+        289.33,
+        129.9,
+        484.49,
+        287.64
+      ],
+      "score": 0.22,
+      "cap": "a piece of cooked bacon"
+    },
+    {
+      "box": [
+        194.92,
+        393.42,
+        272.97,
+        482.43
+      ],
+      "score": 0.22,
+      "cap": "a slice of tomato"
+    },
+    {
+      "box": [
+        239.58,
+        121.92,
+        427.24,
+        270.57
+      ],
+      "score": 0.21,
+      "cap": "a piece of meat"
+    },
+    {
+      "box": [
+        400.18,
+        49.47,
+        617.28,
+        296.24
+      ],
+      "score": 0.2,
+      "cap": "a salad in a bowl"
+    },
+    {
+      "box": [
+        412.41,
+        357.43,
+        574.76,
+        536.07
+      ],
+      "score": 0.2,
+      "cap": "a slice of tomato"
+    },
+    {
+      "box": [
+        348.61,
+        0.8,
+        654.01,
+        97.21
+      ],
+      "score": 0.2,
+      "cap": "a stack of plates"
+    },
+    {
+      "box": [
+        547.97,
+        265.46,
+        774.41,
+        542.48
+      ],
+      "score": 0.19,
+      "cap": "a slice of pizza"
+    },
+    {
+      "box": [
+        389.62,
+        207.79,
+        796.49,
+        735.23
+      ],
+      "score": 0.19,
+      "cap": "a fork on a plate"
+    },
+    {
+      "box": [
+        15.85,
+        173.24,
+        178.57,
+        350.77
+      ],
+      "score": 0.18,
+      "cap": "a fork on a plate"
+    },
+    {
+      "box": [
+        354.67,
+        345.92,
+        513.41,
+        526.3
+      ],
+      "score": 0.18,
+      "cap": "a slice of tomato"
+    },
+    {
+      "box": [
+        175.8,
+        486.95,
+        339.59,
+        615.13
+      ],
+      "score": 0.17,
+      "cap": "a slice of tomato"
+    },
+    {
+      "box": [
+        160.91,
+        717.92,
+        736.1,
+        794.63
+      ],
+      "score": 0.17,
+      "cap": "a black table surface"
+    },
+    {
+      "box": [
+        535.18,
+        199.92,
+        615.23,
+        310.54
+      ],
+      "score": 0.17,
+      "cap": "a piece of meat"
+    },
+    {
+      "box": [
+        194.71,
+        489.39,
+        474.62,
+        622.97
+      ],
+      "score": 0.17,
+      "cap": "a slice of pizza"
+    },
+    {
+      "box": [
+        119.97,
+        664.14,
+        800.0,
+        790.67
+      ],
+      "score": 0.17,
+      "cap": "a silver fork"
+    },
+    {
+      "box": [
+        418.49,
+        360.58,
+        475.07,
+        520.69
+      ],
+      "score": 0.16,
+      "cap": "a slice of tomato"
+    },
+    {
+      "box": [
+        267.76,
+        191.0,
+        595.11,
+        585.67
+      ],
+      "score": 0.16,
+      "cap": "a slice of pizza"
+    },
+    {
+      "box": [
+        258.1,
+        353.63,
+        453.43,
+        531.26
+      ],
+      "score": 0.16,
+      "cap": "a piece of meat"
+    },
+    {
+      "box": [
+        455.91,
+        118.44,
+        521.05,
+        206.32
+      ],
+      "score": 0.15,
+      "cap": "a slice of tomato"
+    },
+    {
+      "box": [
+        10.13,
+        206.12,
+        204.24,
+        509.35
+      ],
+      "score": 0.15,
+      "cap": "a slice of pizza"
+    },
+    {
+      "box": [
+        729.01,
+        611.36,
+        793.87,
+        765.6
+      ],
+      "score": 0.15,
+      "cap": "a fork on a plate"
+    },
+    {
+      "box": [
+        581.18,
+        75.06,
+        793.66,
+        209.98
+      ],
+      "score": 0.15,
+      "cap": "a glass of water"
+    },
+    {
+      "box": [
+        370.82,
+        229.04,
+        741.12,
+        484.54
+      ],
+      "score": 0.15,
+      "cap": "a slice of pizza"
+    },
+    {
+      "box": [
+        508.83,
+        151.09,
+        596.49,
+        245.08
+      ],
+      "score": 0.14,
+      "cap": "a slice of tomato"
+    },
+    {
+      "box": [
+        396.45,
+        0.0,
+        585.74,
+        30.87
+      ],
+      "score": 0.14,
+      "cap": "a white plastic bag"
+    },
+    {
+      "box": [
+        202.62,
+        281.28,
+        387.53,
+        438.7
+      ],
+      "score": 0.14,
+      "cap": "a piece of cooked bacon"
+    },
+    {
+      "box": [
+        317.24,
+        540.87,
+        441.18,
+        608.98
+      ],
+      "score": 0.14,
+      "cap": "a slice of tomato"
+    },
+    {
+      "box": [
+        8.33,
+        567.71,
+        374.4,
+        790.53
+      ],
+      "score": 0.14,
+      "cap": "the plate is white"
+    },
+    {
+      "box": [
+        420.1,
+        14.05,
+        687.31,
+        212.83
+      ],
+      "score": 0.14,
+      "cap": "a fork on a plate"
+    },
+    {
+      "box": [
+        432.9,
+        291.74,
+        706.41,
+        408.39
+      ],
+      "score": 0.13,
+      "cap": "a slice of tomato"
+    },
+    {
+      "box": [
+        420.53,
+        110.6,
+        560.46,
+        235.05
+      ],
+      "score": 0.13,
+      "cap": "a piece of meat"
+    },
+    {
+      "box": [
+        77.49,
+        438.4,
+        579.28,
+        664.12
+      ],
+      "score": 0.13,
+      "cap": "a slice of pizza"
+    },
+    {
+      "box": [
+        675.69,
+        92.21,
+        793.4,
+        231.2
+      ],
+      "score": 0.13,
+      "cap": "a fork on a table"
+    },
+    {
+      "box": [
+        478.17,
+        691.35,
+        744.18,
+        785.56
+      ],
+      "score": 0.13,
+      "cap": "a wooden table"
+    },
+    {
+      "box": [
+        376.01,
+        359.93,
+        438.61,
+        537.89
+      ],
+      "score": 0.13,
+      "cap": "a piece of cooked bacon"
+    },
+    {
+      "box": [
+        27.95,
+        12.13,
+        606.17,
+        204.81
+      ],
+      "score": 0.13,
+      "cap": "a white table cloth"
+    },
+    {
+      "box": [
+        397.33,
+        358.81,
+        455.38,
+        522.0
+      ],
+      "score": 0.13,
+      "cap": "a slice of tomato"
+    },
+    {
+      "box": [
+        390.6,
+        129.43,
+        564.9,
+        287.63
+      ],
+      "score": 0.12,
+      "cap": "a slice of tomato"
+    },
+    {
+      "box": [
+        0.84,
+        9.84,
+        290.79,
+        199.49
+      ],
+      "score": 0.12,
+      "cap": "a white plate with a fork"
+    },
+    {
+      "box": [
+        314.22,
+        745.77,
+        570.09,
+        794.2
+      ],
+      "score": 0.12,
+      "cap": "the table is black"
+    },
+    {
+      "box": [
+        555.74,
+        300.99,
+        702.47,
+        360.07
+      ],
+      "score": 0.12,
+      "cap": "a slice of tomato"
+    },
+    {
+      "box": [
+        177.89,
+        506.33,
+        278.52,
+        602.82
+      ],
+      "score": 0.12,
+      "cap": "a slice of tomato"
+    },
+    {
+      "box": [
+        446.47,
+        373.41,
+        533.99,
+        488.76
+      ],
+      "score": 0.12,
+      "cap": "a slice of tomato"
+    },
+    {
+      "box": [
+        324.97,
+        190.43,
+        492.71,
+        336.42
+      ],
+      "score": 0.11,
+      "cap": "a slice of tomato"
+    },
+    {
+      "box": [
+        40.88,
+        147.38,
+        363.08,
+        368.1
+      ],
+      "score": 0.11,
+      "cap": "a slice of pizza"
+    },
+    {
+      "box": [
+        72.22,
+        345.67,
+        348.52,
+        565.49
+      ],
+      "score": 0.11,
+      "cap": "a slice of pizza"
+    },
+    {
+      "box": [
+        531.63,
+        71.35,
+        623.19,
+        160.58
+      ],
+      "score": 0.11,
+      "cap": "a white napkin on the table"
+    },
+    {
+      "box": [
+        617.87,
+        367.42,
+        713.71,
+        472.89
+      ],
+      "score": 0.11,
+      "cap": "a slice of a carrot"
+    },
+    {
+      "box": [
+        137.75,
+        349.15,
+        383.65,
+        702.87
+      ],
+      "score": 0.11,
+      "cap": "a slice of pizza"
+    },
+    {
+      "box": [
+        78.9,
+        248.63,
+        354.59,
+        364.07
+      ],
+      "score": 0.11,
+      "cap": "a slice of a carrot"
+    },
+    {
+      "box": [
+        466.48,
+        33.33,
+        634.86,
+        181.18
+      ],
+      "score": 0.1,
+      "cap": "a wooden table"
+    },
+    {
+      "box": [
+        151.65,
+        270.08,
+        260.09,
+        327.64
+      ],
+      "score": 0.09,
+      "cap": "a slice of tomato"
+    },
+    {
+      "box": [
+        615.41,
+        316.1,
+        738.17,
+        368.67
+      ],
+      "score": 0.09,
+      "cap": "a slice of pizza"
+    }
+  ]
+}
