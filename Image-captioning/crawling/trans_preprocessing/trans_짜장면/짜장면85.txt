@@ -1,0 +1,2 @@
+a bowl of jajangmyeon 0.529722 0.659799 0.562233 0.372711
+a bowl of jajangmyeon 0.800774 0.285714 0.398451 0.454212

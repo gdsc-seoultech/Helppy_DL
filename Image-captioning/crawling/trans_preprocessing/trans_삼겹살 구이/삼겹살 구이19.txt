@@ -1,0 +1,2 @@
+a bowl of grilled pork belly 0.483618 0.597578 0.921652 0.611111
+a bowl of grilled pork belly 0.797009 0.407407 0.405982 0.754986
