@@ -25,8 +25,6 @@ class DataLoaderPFG(DataLoader):
 
 
 class DenseCapDataset(Dataset):
-    """Images are loaded from by open specific file
-    """
 
     @staticmethod
     def collate_fn(batch):
@@ -42,7 +40,7 @@ class DenseCapDataset(Dataset):
 
         transform = transforms.Compose([
             transforms.ToTensor(),
-            transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225)),
+            transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225)), 
         ])
 
         return transform
@@ -60,11 +58,13 @@ class DenseCapDataset(Dataset):
         self.transform = transform
 
         # === load data here ====
+
+        self.vg_data = pickle.load(open(vg_data_path, 'rb'))
         self.look_up_tables = pickle.load(open(look_up_tables_path, 'rb'))
 
     def set_dataset_type(self, dataset_type, verbose=True):
 
-        assert dataset_type in {None, 'train', 'test', 'val'}
+        assert dataset_type in {None, 'train', 'test'}
 
         if verbose:
             print('[DenseCapDataset]: {} switch to {}'.format(self.dataset_type, dataset_type))
@@ -73,46 +73,34 @@ class DenseCapDataset(Dataset):
 
     def __getitem__(self, idx):
 
-        with h5py.File(self.vg_data_path, 'r') as vg_data:
+        vg_idx = str(self.look_up_tables['split'][self.dataset_type][idx]) if self.dataset_type else idx
+        path = str(vg_idx) + '.jpeg'
+        img_path = os.path.join(self.img_dir_root, path)
 
-            vg_idx = self.look_up_tables['split'][self.dataset_type][idx] if self.dataset_type else idx
+        img = Image.open(img_path).convert("RGB")
+        if self.transform is not None:
+            img = self.transform(img)
+        else:
+            img = transforms.ToTensor()(img)
 
-            img_path = os.path.join(self.img_dir_root, self.look_up_tables['idx_to_directory'][vg_idx],
-                                    self.look_up_tables['idx_to_filename'][vg_idx])
+        boxes = torch.as_tensor(self.vg_data['boxes'][vg_idx], dtype=torch.float32)
+        caps = torch.as_tensor(self.vg_data['caption'][vg_idx], dtype=torch.long)
 
-            img = Image.open(img_path).convert("RGB")
-            if self.transform is not None:
-                img = self.transform(img)
-            else:
-                img = transforms.ToTensor()(img)
+        targets = {
+            'boxes': boxes,
+            'caps': caps,
+        }
 
-            first_box_idx = vg_data['img_to_first_box'][vg_idx]
-            last_box_idx = vg_data['img_to_last_box'][vg_idx]
+        # info = {
+        #     'idx': vg_idx,
+        #     'dir': self.look_up_tables['idx_to_directory'][vg_idx],
+        #     'file_name': self.look_up_tables['idx_to_filename'][vg_idx]
+        # }
 
-            boxes = torch.as_tensor(vg_data['boxes'][first_box_idx: last_box_idx+1], dtype=torch.float32)
-            caps = torch.as_tensor(vg_data['captions'][first_box_idx: last_box_idx+1], dtype=torch.long)
-            caps_len = torch.as_tensor(vg_data['lengths'][first_box_idx: last_box_idx+1], dtype=torch.long)
-
-            targets = {
-                'boxes': boxes,
-                'caps': caps,
-                'caps_len': caps_len,
-            }
-
-            info = {
-                'idx': vg_idx,
-                'dir': self.look_up_tables['idx_to_directory'][vg_idx],
-                'file_name': self.look_up_tables['idx_to_filename'][vg_idx]
-            }
-
-        return img, targets, info
+        return img, targets, 0
 
     def __len__(self):
-
-        if self.dataset_type:
-            return len(self.look_up_tables['split'][self.dataset_type])
-        else:
-            return len(self.look_up_tables['filename_to_idx'])
+        return len(self.look_up_tables['split'][self.dataset_type])
 
 
 class DenseCapDatasetV2(Dataset):
