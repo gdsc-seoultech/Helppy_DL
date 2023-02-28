@@ -1,0 +1,2 @@
+a bowl of kimchi stew 0.511858 0.563900 0.569170 0.527009
+a bowl of kimchi stew 0.204216 0.148880 0.270092 0.276680
