@@ -5,12 +5,12 @@ import torch
 import numpy as np
 from torch.utils.data.dataset import Subset
 from torchvision.models.detection.faster_rcnn import fasterrcnn_resnet50_fpn
-from torch.utils.tensorboard import SummaryWriter
+# from torch.utils.tensorboard import SummaryWriter
 
 from utils.data_loader import DenseCapDataset, DataLoaderPFG
 from model.densecap import densecap_resnet50_fpn
 
-from apex import amp
+# from apex import amp
 
 from evaluate import quality_check, quantity_check
 
@@ -20,13 +20,13 @@ torch.manual_seed(42)
 torch.cuda.manual_seed(42)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-MAX_EPOCHS = 10
+MAX_EPOCHS = 1
 USE_TB = True
 CONFIG_PATH = './model_params'
-MODEL_NAME = 'train_all_val_all_bz_2_epoch_10_inject_init'
-IMG_DIR_ROOT = './data/visual-genome'
-VG_DATA_PATH = './data/VG-regions-lite.h5'
-LOOK_UP_TABLES_PATH = './data/VG-regions-dicts-lite.pkl'
+MODEL_NAME = 'train_1epoch'
+IMG_DIR_ROOT = './data/imgs'
+VG_DATA_PATH = './data/region.pkl'
+LOOK_UP_TABLES_PATH = './data/data.pkl'
 MAX_TRAIN_IMAGE = -1  # if -1, use all images in train set
 MAX_VAL_IMAGE = -1
 
@@ -65,11 +65,11 @@ def set_args():
     return args
 
 
-def save_model(model, optimizer, amp_, results_on_val, iter_counter, flag=None):
+def save_model(model, optimizer, results_on_val, iter_counter, flag=None):
 
     state = {'model': model.state_dict(),
              'optimizer': optimizer.state_dict(),
-             'amp': amp_.state_dict(),
+            #  'amp': amp_.state_dict(),
              'results_on_val':results_on_val,
              'iterations': iter_counter}
     if isinstance(flag, str):
@@ -107,14 +107,14 @@ def train(args):
 
     # apex initialization
     opt_level = 'O1'
-    model, optimizer = amp.initialize(model, optimizer, opt_level=opt_level)
-    # ref: https://github.com/NVIDIA/apex/issues/441
-    model.roi_heads.box_roi_pool.forward = \
-        amp.half_function(model.roi_heads.box_roi_pool.forward)
+    # model, optimizer = amp.initialize(model, optimizer, opt_level=opt_level)
+    # # ref: https://github.com/NVIDIA/apex/issues/441
+    # model.roi_heads.box_roi_pool.forward = \
+    #     amp.half_function(model.roi_heads.box_roi_pool.forward)
 
     train_set = DenseCapDataset(IMG_DIR_ROOT, VG_DATA_PATH, LOOK_UP_TABLES_PATH, dataset_type='train')
     val_set = DenseCapDataset(IMG_DIR_ROOT, VG_DATA_PATH, LOOK_UP_TABLES_PATH, dataset_type='val')
-    idx_to_token = train_set.look_up_tables['idx_to_token']
+    # idx_to_token = train_set.look_up_tables['idx_to_token']
 
     if MAX_TRAIN_IMAGE > 0:
         train_set = Subset(train_set, range(MAX_TRAIN_IMAGE))
@@ -128,9 +128,8 @@ def train(args):
     best_map = 0.
 
     # use tensorboard to track the loss
-    if USE_TB:
-        writer = SummaryWriter()
-
+    # if USE_TB:
+    #     writer = SummaryWriter()
     for epoch in range(MAX_EPOCHS):
 
         for batch, (img, targets, info) in enumerate(train_loader):
@@ -144,20 +143,18 @@ def train(args):
             detect_loss =  losses['loss_objectness'] + losses['loss_rpn_box_reg'] + \
                            losses['loss_classifier'] + losses['loss_box_reg']
             caption_loss = losses['loss_caption']
-
-
             total_loss = args['detect_loss_weight'] * detect_loss + args['caption_loss_weight'] * caption_loss
 
-            # record loss
-            if USE_TB:
-                writer.add_scalar('batch_loss/total', total_loss.item(), iter_counter)
-                writer.add_scalar('batch_loss/detect_loss', detect_loss.item(), iter_counter)
-                writer.add_scalar('batch_loss/caption_loss', caption_loss.item(), iter_counter)
+            # # record loss
+            # if USE_TB:
+            #     writer.add_scalar('batch_loss/total', total_loss.item(), iter_counter)
+            #     writer.add_scalar('batch_loss/detect_loss', detect_loss.item(), iter_counter)
+            #     writer.add_scalar('batch_loss/caption_loss', caption_loss.item(), iter_counter)
 
-                writer.add_scalar('details/loss_objectness', losses['loss_objectness'].item(), iter_counter)
-                writer.add_scalar('details/loss_rpn_box_reg', losses['loss_rpn_box_reg'].item(), iter_counter)
-                writer.add_scalar('details/loss_classifier', losses['loss_classifier'].item(), iter_counter)
-                writer.add_scalar('details/loss_box_reg', losses['loss_box_reg'].item(), iter_counter)
+            #     writer.add_scalar('details/loss_objectness', losses['loss_objectness'].item(), iter_counter)
+            #     writer.add_scalar('details/loss_rpn_box_reg', losses['loss_rpn_box_reg'].item(), iter_counter)
+            #     writer.add_scalar('details/loss_classifier', losses['loss_classifier'].item(), iter_counter)
+            #     writer.add_scalar('details/loss_box_reg', losses['loss_box_reg'].item(), iter_counter)
 
 
             if iter_counter % (len(train_set)/(args['batch_size']*16)) == 0:
@@ -166,22 +163,22 @@ def train(args):
                     print(" <{}> {:.3f}".format(k, v))
 
             optimizer.zero_grad()
-            # total_loss.backward()
-            # apex backward
-            with amp.scale_loss(total_loss, optimizer) as scaled_loss:
-                scaled_loss.backward()
+            total_loss.backward()
+            # # apex backward
+            # with amp.scale_loss(total_loss, optimizer) as scaled_loss:
+            #     scaled_loss.backward()
             optimizer.step()
 
             if iter_counter > 0 and iter_counter % 20000 == 0:
                 try:
-                    results = quantity_check(model, val_set, idx_to_token, device, max_iter=-1, verbose=True)
-                    if results['map'] > best_map:
-                        best_map = results['map']
-                        save_model(model, optimizer, amp, results, iter_counter)
+                    # results = quantity_check(model, val_set, idx_to_token, device, max_iter=-1, verbose=True)
+                    # if results['map'] > best_map:
+                    #     best_map = results['map']
+                    save_model(model, optimizer, iter_counter)
 
-                    if USE_TB:
-                        writer.add_scalar('metric/map', results['map'], iter_counter)
-                        writer.add_scalar('metric/det_map', results['detmap'], iter_counter)
+                    # if USE_TB:
+                    #     writer.add_scalar('metric/map', results['map'], iter_counter)
+                    #     writer.add_scalar('metric/det_map', results['detmap'], iter_counter)
 
                 except AssertionError as e:
                     print('[INFO]: evaluation failed at epoch {}'.format(epoch))
@@ -189,10 +186,10 @@ def train(args):
 
             iter_counter += 1
 
-    save_model(model, optimizer, amp, results, iter_counter, flag='end')
+    save_model(model, optimizer, results, iter_counter, flag='end')
 
-    if USE_TB:
-        writer.close()
+    # if USE_TB:
+    #     writer.close()
 
 
 if __name__ == '__main__':
